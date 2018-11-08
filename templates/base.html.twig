@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="stylesheet" href="{{ asset('build/css/app.css') }}"/>
+</head>
+<body>
+<h1>Bonjour sur le site de Jojotique</h1>
+<h3>La page que vous avez demandée n'existe plus car le site est en rénovation.</h3>
+
+<section>
+    <aside>
+        <img src="{{ asset('pic/tique.png') }}" alt="Logo de Jojotique représentant une tique pirate"/>
+    </aside>
+    <article>
+        <p>Je vous invite à visiter mes autres projets :</p>
+        <div class="cards">
+            <a href="http://p2.jojotique.fr/" target="_blank">
+                <div class="card row1">
+                    <h4>Chalets & Caviar</h4>
+                    <img src="{{ asset('pic/header_chalets.jpg') }}" alt="Photo de l'intérieur d'un chalet"/>
+                </div>
+            </a>
+                <div class="card">
+                    <h4>ExpressFood<br/>Conception de document technique<br/>(pas de visuel)</h4>
+                    <img src="{{ asset('pic/header_expressFood.jpg') }}" alt="Photo d'un banquet de légumes colorés"/>
+                </div>
+            <a href="http://p3.jojotique.fr/" target="_blank">
+                <div class="card">
+                    <h4>Festival du film de Plein air de Monceau</h4>
+                    <img src="{{ asset('pic/header_festival.jpg') }}" alt="Photo d'un festival de film en plein air"/>
+                </div>
+            </a>
+            <a href="http://p5.jojotique.fr/accueil" target="_blank">
+                <div class="card">
+                    <h4>Blog d'auteur</h4>
+                    <img src="{{ asset('pic/header_blog.jpg') }}" alt="Photo d'un festival de film en plein air"/>
+                </div>
+            </a>
+            <a href="https://p6.jojotique.fr/" target="_blank">
+                <div class="card">
+                    <h4>SnowTricks</h4>
+                    <img src="{{ asset('pic/header_snowTricks.jpg') }}" alt="Photo d'un festival de film en plein air"/>
+                </div>
+            </a>
+            <a href="https://p7.jojotique.fr/api/doc" target="_blank">
+                <div class="card">
+                    <h4>BileMo API - documentation</h4>
+                    <img src="{{ asset('pic/header_bileMo.jpg') }}" alt="Photo d'un festival de film en plein air"/>
+                </div>
+            </a>
+            <div class="card">
+                <h4>ToDo & Co (en construction)</h4>
+                <img src="{{ asset('pic/header_toDo.jpg') }}" alt="Photo d'un festival de film en plein air"/>
+            </div>
+        </div>
+    </article>
+</section>
+
+</body>
+</html>

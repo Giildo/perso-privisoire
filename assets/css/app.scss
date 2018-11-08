@@ -1,0 +1,49 @@
+body {
+  background-color: lightgray;
+  h1, h3 {
+    text-align: center;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    aside {
+      grid-column-start: 1;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    article {
+      grid-column-start: 2;
+
+      .cards {
+        display: inline-grid;
+        grid-gap: 10px;
+
+        grid-template-columns: auto auto auto;
+
+        .card {
+          position: relative;
+
+          img {
+            width: 100%;
+          }
+
+          h4 {
+            position: absolute;
+            width: 100%;
+            z-index: 500;
+            color: white;
+            background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,1), rgba(0,0,0,0.5));
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
