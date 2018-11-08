@@ -3,30 +3,46 @@ body {
   body h1, body h3 {
     text-align: center; }
   body section {
-    display: grid;
-    grid-template-columns: 30% 70%; }
+    display: inline-grid; }
+    @media screen and (min-width: 720px) {
+      body section {
+        grid-template-columns: 30% 70%; } }
+    @media screen and (max-width: 720px) {
+      body section {
+        grid-template-columns: auto; } }
     body section aside {
-      grid-column-start: 1;
       display: flex;
       align-items: center; }
+      @media screen and (min-width: 720px) {
+        body section aside {
+          grid-column-start: 1; } }
       body section aside img {
         width: 100%; }
-    body section article {
-      grid-column-start: 2; }
-      body section article .cards {
-        display: inline-grid;
-        grid-gap: 10px;
-        grid-template-columns: auto auto auto; }
-        body section article .cards .card {
-          position: relative; }
-          body section article .cards .card img {
-            width: 100%; }
-          body section article .cards .card h4 {
-            position: absolute;
-            width: 100%;
-            z-index: 500;
-            color: white;
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.5), black, rgba(0, 0, 0, 0.5));
-            text-align: center; }
+    @media screen and (min-width: 720px) {
+      body section article {
+        grid-column-start: 2; } }
+    body section article .cards {
+      display: inline-grid;
+      grid-gap: 10px; }
+      @media screen and (min-width: 992px) {
+        body section article .cards {
+          grid-template-columns: auto auto auto; } }
+      @media screen and (min-width: 720px) and (max-width: 992px) {
+        body section article .cards {
+          grid-template-columns: auto auto; } }
+      @media screen and (max-width: 720px) {
+        body section article .cards {
+          grid-template-columns: auto; } }
+      body section article .cards .card {
+        position: relative; }
+        body section article .cards .card img {
+          width: 100%; }
+        body section article .cards .card h4 {
+          position: absolute;
+          width: 100%;
+          z-index: 500;
+          color: white;
+          background: linear-gradient(to right, rgba(0, 0, 0, 0.5), black, rgba(0, 0, 0, 0.5));
+          text-align: center; }
 
 /*# sourceMappingURL=app.css.map */

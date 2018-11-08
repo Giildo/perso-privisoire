@@ -5,11 +5,21 @@ body {
   }
 
   section {
-    display: grid;
-    grid-template-columns: 30% 70%;
+    display: inline-grid;
+
+    @media screen and (min-width: 720px) {
+      grid-template-columns: 30% 70%;
+    }
+
+    @media screen and (max-width: 720px) {
+      grid-template-columns: auto;
+    }
 
     aside {
-      grid-column-start: 1;
+      @media screen and (min-width: 720px) {
+        grid-column-start: 1;
+      }
+
       display: flex;
       align-items: center;
 
@@ -19,13 +29,25 @@ body {
     }
 
     article {
-      grid-column-start: 2;
+      @media screen and (min-width: 720px) {
+        grid-column-start: 2;
+      }
 
       .cards {
         display: inline-grid;
         grid-gap: 10px;
 
-        grid-template-columns: auto auto auto;
+        @media screen and (min-width: 992px) {
+          grid-template-columns: auto auto auto;
+        }
+
+        @media screen and (min-width: 720px) and (max-width: 992px) {
+          grid-template-columns: auto auto;
+        }
+
+        @media screen and (max-width: 720px) {
+          grid-template-columns: auto;
+        }
 
         .card {
           position: relative;
